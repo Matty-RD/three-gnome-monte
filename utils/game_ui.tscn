@@ -1,12 +1,18 @@
-[gd_scene format=3 uid="uid://ym8oslsp0d2"]
+[gd_scene load_steps=2 format=3 uid="uid://ym8oslsp0d2"]
 
-[node name="game_ui" type="Control"]
+[ext_resource type="Script" path="res://utils/game_ui.gd" id="1_yfadd"]
+
+[node name="game_ui" type="Control" node_paths=PackedStringArray("end_turn", "hp", "turn_counter")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yfadd")
+end_turn = NodePath("action_button")
+hp = NodePath("hp")
+turn_counter = NodePath("turn_counter")
 
 [node name="action_button" type="Button" parent="."]
 layout_mode = 0
@@ -24,3 +30,12 @@ offset_right = 261.0
 offset_bottom = 292.0
 theme_override_font_sizes/font_size = 42
 text = "Heath: "
+
+[node name="turn_counter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1022.0
+offset_top = 451.0
+offset_right = 1091.0
+offset_bottom = 481.0
+
+[connection signal="pressed" from="action_button" to="." method="_on_action_button_pressed"]

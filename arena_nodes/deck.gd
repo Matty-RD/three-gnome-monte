@@ -20,6 +20,7 @@ func _on_deck_pressed():
 			drawn_card.card_name = random_card["name"]
 			drawn_card.card_attack = random_card["attack"]
 			drawn_card.card_defense = random_card["defense"]
+			drawn_card.card_type = random_card["card_type"]
 			random_card["used"] = true
 			drawn_card.global_position = CardGlobals.hand_di[n]["location"]
 			CardGlobals.hand_di[n]["current_card"] = drawn_card

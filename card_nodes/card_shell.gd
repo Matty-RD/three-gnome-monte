@@ -1,6 +1,7 @@
 extends Node2D
 
 var card_name = ""
+var card_type = ""
 var card_attack = 0
 var card_defense = 0
 @export var title : Label
