@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd7g7w52he667"]
+
+[ext_resource type="Script" path="res://arena_nodes/hand.gd" id="1_5l1hk"]
+
+[node name="hand" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5l1hk")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 498.0
+offset_right = 373.0
+offset_bottom = 506.0
+scale = Vector2(15, 30)
+theme_override_constants/h_separation = 0
+columns = 5
+
+[node name="hand_01" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.0392157)
+show_behind_parent = true
+layout_mode = 2
+
+[node name="hand_02" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.0392157)
+layout_mode = 2
+
+[node name="hand_03" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.0392157)
+layout_mode = 2
+
+[node name="hand_04" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.0392157)
+layout_mode = 2
+
+[node name="hand_05" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.0392157)
+layout_mode = 2
+
+[connection signal="pressed" from="GridContainer/hand_01" to="." method="_on_slot_01_pressed"]
+[connection signal="pressed" from="GridContainer/hand_01" to="." method="_on_hand_01_pressed"]
+[connection signal="pressed" from="GridContainer/hand_02" to="." method="_on_hand_02_pressed"]
+[connection signal="pressed" from="GridContainer/hand_02" to="." method="_on_slot_02_pressed"]
+[connection signal="pressed" from="GridContainer/hand_03" to="." method="_on_hand_03_pressed"]
+[connection signal="pressed" from="GridContainer/hand_03" to="." method="_on_slot_03_pressed"]
+[connection signal="pressed" from="GridContainer/hand_04" to="." method="_on_slot_04_pressed"]
+[connection signal="pressed" from="GridContainer/hand_04" to="." method="_on_hand_04_pressed"]
+[connection signal="pressed" from="GridContainer/hand_05" to="." method="_on_hand_05_pressed"]
+[connection signal="pressed" from="GridContainer/hand_05" to="." method="_on_slot_05_pressed"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3yo0b5mgrpi3"]
+
+[ext_resource type="Script" path="res://arena_nodes/field.gd" id="1_34k44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tv5x0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_onbam"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2wg18"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fq62g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u3muy"]
+
+[node name="field" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_34k44")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 94.0
+offset_right = 326.0
+offset_bottom = 102.0
+scale = Vector2(15, 30)
+theme_override_constants/h_separation = 2
+columns = 5
+
+[node name="slot_01" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.164706)
+show_behind_parent = true
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tv5x0")
+
+[node name="slot_02" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.164706)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_onbam")
+
+[node name="slot_03" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.164706)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2wg18")
+
+[node name="slot_04" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.164706)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fq62g")
+
+[node name="slot_05" type="Button" parent="GridContainer"]
+self_modulate = Color(1, 1, 1, 0.164706)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u3muy")
+
+[connection signal="pressed" from="GridContainer/slot_01" to="." method="_on_slot_01_pressed"]
+[connection signal="pressed" from="GridContainer/slot_02" to="." method="_on_slot_02_pressed"]
+[connection signal="pressed" from="GridContainer/slot_03" to="." method="_on_slot_03_pressed"]
+[connection signal="pressed" from="GridContainer/slot_04" to="." method="_on_slot_04_pressed"]
+[connection signal="pressed" from="GridContainer/slot_05" to="." method="_on_slot_05_pressed"]

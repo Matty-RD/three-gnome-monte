@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw0yxoi2a4c07"]
+
+[ext_resource type="PackedScene" uid="uid://t3yalwssk8qf" path="res://arena_nodes/deck.tscn" id="1_7mw7u"]
+[ext_resource type="PackedScene" uid="uid://d3yo0b5mgrpi3" path="res://arena_nodes/field.tscn" id="2_dskx6"]
+[ext_resource type="PackedScene" uid="uid://bd7g7w52he667" path="res://arena_nodes/hand.tscn" id="3_acjr6"]
+[ext_resource type="PackedScene" uid="uid://ym8oslsp0d2" path="res://utils/game_ui.tscn" id="4_uo7ky"]
+
+[node name="arena" type="Node2D"]
+
+[node name="deck" parent="." instance=ExtResource("1_7mw7u")]
+
+[node name="field" parent="." instance=ExtResource("2_dskx6")]
+
+[node name="hand" parent="." instance=ExtResource("3_acjr6")]
+
+[node name="game_ui" parent="." instance=ExtResource("4_uo7ky")]
+
+[editable path="field"]
+[editable path="hand"]
