@@ -2,7 +2,7 @@ extends Node
 
 #Investigate Resources 
 
-var current_select = null
+var current_select = false
 var current_new_card = null
 
 

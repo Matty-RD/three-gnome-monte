@@ -16,6 +16,7 @@ func _on_slot_01_pressed():
 				CardGlobals.hand_di[n]["current_card"].global_position = CardGlobals.field_di["slot_01"]["location"]
 				CardGlobals.hand_di[n]["current_card"] = null
 				CardGlobals.hand_di[n]["selected"] = false
+				CardGlobals.current_select = false
 func _on_slot_02_pressed():
 	if !CardGlobals.field_di["slot_02"]["current_card"]:
 		for n in CardGlobals.hand_di:
@@ -24,6 +25,7 @@ func _on_slot_02_pressed():
 				CardGlobals.hand_di[n]["current_card"].global_position = CardGlobals.field_di["slot_02"]["location"]
 				CardGlobals.hand_di[n]["current_card"] = null
 				CardGlobals.hand_di[n]["selected"] = false
+				CardGlobals.current_select = false
 func _on_slot_03_pressed():
 	if !CardGlobals.field_di["slot_03"]["current_card"]:
 		for n in CardGlobals.hand_di:
@@ -32,6 +34,7 @@ func _on_slot_03_pressed():
 				CardGlobals.hand_di[n]["current_card"].global_position = CardGlobals.field_di["slot_03"]["location"]
 				CardGlobals.hand_di[n]["current_card"] = null
 				CardGlobals.hand_di[n]["selected"] = false
+				CardGlobals.current_select = false
 func _on_slot_04_pressed():
 	if !CardGlobals.field_di["slot_04"]["current_card"]:
 		for n in CardGlobals.hand_di:
@@ -40,6 +43,7 @@ func _on_slot_04_pressed():
 				CardGlobals.hand_di[n]["current_card"].global_position = CardGlobals.field_di["slot_04"]["location"]
 				CardGlobals.hand_di[n]["current_card"] = null
 				CardGlobals.hand_di[n]["selected"] = false
+				CardGlobals.current_select = false
 func _on_slot_05_pressed():
 	if !CardGlobals.field_di["slot_05"]["current_card"]:
 		for n in CardGlobals.hand_di:
@@ -48,3 +52,4 @@ func _on_slot_05_pressed():
 				CardGlobals.hand_di[n]["current_card"].global_position = CardGlobals.field_di["slot_05"]["location"]
 				CardGlobals.hand_di[n]["current_card"] = null
 				CardGlobals.hand_di[n]["selected"] = false
+				CardGlobals.current_select = false
